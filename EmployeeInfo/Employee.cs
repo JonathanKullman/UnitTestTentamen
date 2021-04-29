@@ -29,11 +29,11 @@ namespace EmployeeInfo
                 }
                 else if (String.IsNullOrEmpty(value))
                 {
-                    throw new ArgumentNullException();
+                    throw new ArgumentNullException("Name cannot be empty");
                 }   
                 else
                 {
-                    throw new ArgumentOutOfRangeException();
+                    throw new ArgumentOutOfRangeException("name is too long, max 15 letters.");
 
                 }
 
@@ -53,11 +53,11 @@ namespace EmployeeInfo
                 }
                 else if (String.IsNullOrEmpty(value))
                 {
-                    throw new ArgumentNullException();
+                    throw new ArgumentNullException("Lastname cannot be empty");
                 }
                 else
                 {
-                    throw new ArgumentOutOfRangeException();
+                    throw new ArgumentOutOfRangeException("name is too long, max 20 letters.");
 
                 }
 
@@ -74,7 +74,7 @@ namespace EmployeeInfo
                 }
                 else
                 {
-                    throw new ArgumentOutOfRangeException();
+                    throw new ArgumentOutOfRangeException("cannot be more than 70 years back, neither in the future");
                 }
             }
         }
@@ -90,7 +90,7 @@ namespace EmployeeInfo
                 }
                 else
                 {
-                    throw new ArgumentOutOfRangeException();
+                    throw new ArgumentOutOfRangeException("Cannot be in the future");
                 }
             }
         }
@@ -106,7 +106,7 @@ namespace EmployeeInfo
                 }
                 else
                 {
-                    throw new ArgumentOutOfRangeException();
+                    throw new ArgumentOutOfRangeException("Cannot be a negative value");
                 }
             }
         }
@@ -123,7 +123,7 @@ namespace EmployeeInfo
                 }
                 else
                 {
-                    throw new ArgumentOutOfRangeException();
+                    throw new ArgumentOutOfRangeException("cannot be a negative value or above 100");
                 }
                  
             }
@@ -141,7 +141,7 @@ namespace EmployeeInfo
                 }
                 else
                 {
-                    throw new ArgumentException();
+                    throw new ArgumentException("Cannot contain anything else than digits, whitespace and -");
                 }
             }
         }
@@ -169,12 +169,12 @@ namespace EmployeeInfo
                     }
                     else
                     {
-                        throw new ArgumentException();
+                        throw new ArgumentException("Cannot contain more than one @");
                     }
                 }
                 else
                 {
-                    throw new ArgumentException();
+                    throw new ArgumentException("Cannot contain whitespace and has to contain a dot.");
                 }
             }
         }
